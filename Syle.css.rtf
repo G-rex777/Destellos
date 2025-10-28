@@ -1,0 +1,224 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww30040\viewh18900\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 /* === Fuentes y colores base === */\
+body \{\
+  margin: 0;\
+  font-family: 'Poppins', sans-serif;\
+  color: #fff;\
+  background: radial-gradient(circle at top, #03091e 0%, #020615 100%);\
+  overflow-x: hidden;\
+\}\
+\
+h1, h2, h3 \{\
+  font-family: 'Playfair Display', serif;\
+\}\
+\
+a \{\
+  text-decoration: none;\
+  color: #fff;\
+\}\
+\
+/* === Cabecera y navegaci\'f3n === */\
+header \{\
+  text-align: center;\
+  padding: 2rem 1rem;\
+  background: rgba(0, 0, 0, 0.3);\
+  position: sticky;\
+  top: 0;\
+  backdrop-filter: blur(6px);\
+  z-index: 100;\
+\}\
+\
+header h1 \{\
+  font-size: 1.8rem;\
+  letter-spacing: 2px;\
+\}\
+\
+header h2 \{\
+  font-weight: 300;\
+  margin-top: 0.3rem;\
+\}\
+\
+nav ul \{\
+  list-style: none;\
+  display: flex;\
+  justify-content: center;\
+  gap: 2rem;\
+  padding: 0;\
+\}\
+\
+nav a:hover \{\
+  color: #8fd3ff;\
+\}\
+\
+/* === Secci\'f3n principal con animaciones === */\
+.hero \{\
+  position: relative;\
+  height: 100vh;\
+  text-align: center;\
+  display: flex;\
+  flex-direction: column;\
+  justify-content: center;\
+  align-items: center;\
+  overflow: hidden;\
+\}\
+\
+.hero-content \{\
+  z-index: 2;\
+  position: relative;\
+  animation: fadeIn 2s ease;\
+\}\
+\
+.buttons \{\
+  margin-top: 1.5rem;\
+\}\
+\
+.btn \{\
+  display: inline-block;\
+  padding: 0.8rem 1.5rem;\
+  margin: 0.5rem;\
+  border-radius: 50px;\
+  font-weight: 500;\
+  transition: 0.3s;\
+\}\
+\
+.listen \{\
+  background: rgba(255,255,255,0.1);\
+  border: 1px solid #fff;\
+\}\
+\
+.listen:hover \{\
+  background: #fff;\
+  color: #000;\
+\}\
+\
+.buy \{\
+  background: linear-gradient(90deg, #8fd3ff, #5e81ff);\
+  box-shadow: 0 0 10px #5e81ff;\
+\}\
+\
+.buy:hover \{\
+  transform: scale(1.05);\
+\}\
+\
+/* === Tortuga animada === */\
+.turtle \{\
+  position: absolute;\
+  width: 200px;\
+  height: 150px;\
+  background: radial-gradient(circle at 30% 40%, #74c7d3 30%, #3b7d91 100%);\
+  border-radius: 50% 50% 40% 60%;\
+  top: 40%;\
+  left: -250px;\
+  animation: swim 30s linear infinite;\
+  opacity: 0.7;\
+  filter: blur(1px);\
+\}\
+\
+@keyframes swim \{\
+  0% \{ transform: translateX(0) translateY(0) rotate(5deg); \}\
+  50% \{ transform: translateX(110vw) translateY(-40px) rotate(-5deg); \}\
+  100% \{ transform: translateX(0) translateY(0) rotate(5deg); \}\
+\}\
+\
+/* === Ondas de agua === */\
+.waves \{\
+  position: absolute;\
+  bottom: 0;\
+  width: 200%;\
+  height: 150px;\
+  background: rgba(255,255,255,0.05);\
+  border-radius: 100%;\
+  animation: waveMove 10s ease-in-out infinite alternate;\
+  filter: blur(10px);\
+\}\
+\
+@keyframes waveMove \{\
+  0% \{ transform: translateX(0) scaleY(1); \}\
+  100% \{ transform: translateX(-25%) scaleY(1.2); \}\
+\}\
+\
+/* === Estrellas === */\
+body::before \{\
+  content: "";\
+  position: fixed;\
+  width: 200%;\
+  height: 200%;\
+  background: radial-gradient(white 1px, transparent 1px);\
+  background-size: 2px 2px;\
+  animation: stars 100s linear infinite;\
+  opacity: 0.3;\
+  top: 0;\
+  left: 0;\
+\}\
+\
+@keyframes stars \{\
+  from \{ transform: translateY(0); \}\
+  to \{ transform: translateY(-200px); \}\
+\}\
+\
+/* === Secciones === */\
+.section \{\
+  padding: 5rem 2rem;\
+  text-align: center;\
+  background: rgba(0, 0, 0, 0.4);\
+  margin: 2rem 0;\
+\}\
+\
+.section p \{\
+  max-width: 600px;\
+  margin: 0 auto;\
+  line-height: 1.6;\
+\}\
+\
+/* === Contacto === */\
+form \{\
+  display: flex;\
+  flex-direction: column;\
+  max-width: 400px;\
+  margin: 2rem auto;\
+  gap: 1rem;\
+\}\
+\
+input, textarea, button \{\
+  padding: 0.8rem;\
+  border: none;\
+  border-radius: 6px;\
+  font-family: 'Poppins', sans-serif;\
+\}\
+\
+input, textarea \{\
+  background: rgba(255,255,255,0.1);\
+  color: #fff;\
+\}\
+\
+button \{\
+  background: linear-gradient(90deg, #8fd3ff, #5e81ff);\
+  color: #fff;\
+  font-weight: 600;\
+  cursor: pointer;\
+  transition: 0.3s;\
+\}\
+\
+button:hover \{\
+  transform: scale(1.05);\
+\}\
+\
+/* === Footer === */\
+footer \{\
+  text-align: center;\
+  padding: 1rem;\
+  background: rgba(0,0,0,0.3);\
+  font-size: 0.8rem;\
+\}\
+\
+/* === Animaciones generales === */\
+@keyframes fadeIn \{\
+  from \{ opacity: 0; transform: translateY(20px); \}\
+  to \{ opacity: 1; transform: translateY(0); \}\
+\}}
